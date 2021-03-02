@@ -1,0 +1,40 @@
+<div class='card bg-light'>
+    <span class="card-header text-light bg-info">{{ pageTitle }}</span>
+    <div class="card-body">
+        <div class="row">
+            <div class='col-md-2'>Filter by: </div>
+            <div class="col-md-4"> <input type="text"
+                       class="form-control" /></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Filtered by: </h3>
+            </div>
+            <table class="table table-striped"
+                   *ngIf="products && products.length">
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-info">Show Product Image</button>
+                        </th>
+                        <th>Product</th>
+                        <th>ID</th>
+                        <th>Release Date</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of products'>
+                        <td></td>
+                        <td>{{ product.productName }}</td>
+                        <td>{{ product.productCode }}</td>
+                        <td>{{ product.releaseDate }}</td>
+                        <td>{{ product.price }}</td>
+                        <td>{{ product.starRating }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
