@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from './products/product.service';
+import { ProductGuardService } from './products/product-guard.service';
+
 
 @Component({
   selector: 'pm-root',
@@ -15,7 +17,7 @@ import { ProductService } from './products/product.service';
       <router-outlet></router-outlet>
     </div>
     `,
-  providers: [ ProductService ]
+  providers: [ ProductService, ProductGuardService ]
 })
 
 export class AppComponent {

@@ -3,9 +3,37 @@
           *ngIf='product'>
         {{ pageTitle + ': ' + product.productName}}
     </span>
-    <div class="card-body">
-        <div class="row">
-            <!-- product details here -->
+
+    <div class="container-fluid">
+
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img [src]="product.imageUrl"
+                         class="card-img-top"
+                         [title]="product.productName"
+                         style="width:auto; max-height:500px;">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.productName }}</h5>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ product.description }}</li>
+                            <li class="list-group-item">Code: {{ product.productCode }} </li>
+                            <li class="list-group-item">Availability: {{ product.releaseDate }} </li>
+                            <li class="list-group-item">Price: {{ product.price | currency:'USD':true:'1.2-2'}} </li>
+                            <li class="list-group-item">Rating: <pm-star [rating]='product.starRating'></pm-star>
+                            </li>
+                        </ul>
+                        <p class="card-text">
+                            <a class="btn btn-info"
+                               (click)="onBack()"
+                               style="color: white; margin-top:10px;"><i class="fa fa-arrow-left"></i> Back</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
