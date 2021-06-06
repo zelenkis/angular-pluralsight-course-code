@@ -1,4 +1,6 @@
-# apm
+# APM Product Listing app
+
+This project is a simple product listing web app that was built in [Angular](angular.io) and is meant to help familiarize with the basics of Angular framework. The code is written based Pluralsight course "Angular - Getting Started" by Deborah Kurata.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
